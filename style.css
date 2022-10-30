@@ -10,9 +10,8 @@ html, body {
 }
 
 a {
-  color: darkturquoise;
-    text-decoration: none;
-}
+    font-style:italic;
+    }
 
 a:hover {
     color: black;
@@ -76,7 +75,6 @@ h2 {
 }
 
 .dropcap {
-    color: darkturquoise;
   float: left;
   font-family: Georgia;
   font-size: 80px;
@@ -90,7 +88,7 @@ h2 {
 p {
     margin: 0;
     top: 0;
-    font-family: 'Libre Baskerville', serif;
+    font-family: sans-serif;
 }
 
 
