@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-
+<html lang="en-GB">
 <head>
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
-    <script src="sketch.js"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James Misson</title>
+<meta name="description" content="James Misson: research software engineer and book historian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  html { background: #fdfcf8; color: #1c1b19; }
+  body {
+    font-family: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: 34em;
+    margin: 0 auto;
+    padding: 4.5em 1.25em 6em;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-kerning: normal;
+    font-feature-settings: "kern", "liga", "onum";
+    hyphens: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 {
+    font-size: 2.1em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.15em;
+  }
+  .subtitle { font-style: italic; margin: 0 0 2.5em; }
+  h2 {
+    font-size: 1em;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    margin: 3em 0 1em;
+  }
+  p { margin: 0; }
+  p + p { text-indent: 1.5em; }
+  .subtitle + p { text-indent: 0; }
+  .entry { padding-left: 1.5em; text-indent: -1.5em; margin: 0 0 0.7em; }
+  .entry + .entry { text-indent: -1.5em; }
+  a { color: inherit; text-decoration-thickness: 0.05em; text-underline-offset: 0.15em; text-decoration-color: #b8b2a6; }
+  a:hover { text-decoration-color: currentColor; }
+  footer { margin-top: 3em; font-style: italic; }
+  @media (max-width: 30em) { body { font-size: 1.125rem; padding-top: 2.5em; } }
+</style>
 </head>
-
 <body>
-    
-    <div class="header1">
-    </div>
-    
-    <div class="header2"><img src="headertype.svg"></div>
-    
-    <div class="header3">
-    </div>
-        <div class="intro"> 
-        <br>
-        <p>Most of my research is in the field of ‘Computational Bibliography’ — the use of code and data to analyse the history of printing and publishing. I'm especially interested in typography, and my forthcoming book is a data-driven study of the uses of blackletter, roman, and italic in the sixteenth century. I am currently a Language Engineer at Oxford Languages, developing new features for the online <i>Oxford English Dictionary</i>. Before that, I was Research Assistant in Digital Humanities at the University of Geneva, and taught medieval and early modern English at the University of Oxford.</p>
-        <br>
-        <h1>Projects</h1>
-        <br>
-        🐙 <a href="https://jamesmisson.github.io/Octopus/">Octopus</a> An app for quickly constructing complex search queries, and searching them in eight databases at once, developed for researchers at the OED
-        <br><br>
-        🎯 <a href="https://github.com/jamesmisson/q-generator">Q-Gen</a> A Chrome extension that generates XML citations according to the OED's house style
-        <br><br>
-        📚 <a href="https://earlymodernprefaces.unige.ch/index.html">To The Reader</a> A database of early modern printed prefaces, built for the University of Geneva's English Department
-        <br><br>
-        🔠 <a href="https://jamesmisson.github.io/eebography/">Eebography</a> A font that recreates the visual distortions of the Early English Books Online database
-        <br><br>
-        <h1>Publications</h1>
-        <br>
-        <a href="https://doi.org/10.1093/oxfordhb/9780198846239.013.17">‘Typography’, <i>The Oxford Handbook to the History of the Book in Early Modern England</i>, ed. Adam Smyth (OUP, 2023)</a>
-        <br><br>
-        <a href="https://doi.org/10.1093/oso/9780198863045.003.0005">‘Kludging Type: Some Workarounds in Early English Print’, <i>Printing & Misprinting</i>, ed. by Anthony Grafton, Paolo Sachet, and Geri Della Rocca de Candal (OUP, 2023)</a>
-        <br><br>
-        <a href="https://doi.org/10.1353/bh.2022.0018">James Misson & Devani Singh, ‘Computing Book Parts with EEBO-TCP’, <i>Book History</i>, Volume 27, 2022</a>
-        <br><br>
-        <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119086130">‘Copland, Robert (Tudor poet)’, <i>The Chaucer Encyclopedia</i>, eds. Richard Newhauser, Vincent Gillespie, Jessica Rosenfeld & Katie Walter (Wiley Blackwell, 2022)</a>
-        <br><br>
-        <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119086130">‘The Pilgrim’s Tale’, <i>The Chaucer Encyclopedia</i>, eds. Richard Newhauser, Vincent Gillespie, Jessica Rosenfeld & Katie Walter (Wiley Blackwell, 2022)</a>
-        <br><br>
-        <a href="https://doi.org/10.1007/978-3-030-88055-2_9">‘For Lack of Letters: Early Typographical Shibboleths of English and Other Foreign Languages’, <i>Print, Agency, and Regional Identity</i>, ed. Rachel Stenner (Palgrave Macmillan, 2022)</a>
-        <br><br>
-        <a href="https://inscriptionjournal.com/2021/10/19/signifying-nothing/">‘Signifying Nothing: Following a Hole through Three Text Technologies’, <i>Inscription: The Journal of Material Text</i>, Issue 2, 2021/</a>
-        <br><br>
-        <a href="https://doi.org/10.1017/S1360674320000209">Louise Mycock & James Misson, ‘Lone pronoun tags in Early Modern English: the dramas of Marlow, Shakespeare, and Jonson,’ <i>English Language and Linguistics</i>, 2020</a>
-        <br><br>
-        <a href="link.gale.com/apps/doc/A636714940/EAIM?u=anon~afcec16&sid=sitemap&xid=97f93367">[Review] ‘Typographic Firsts: Adventures in Early Printing, John Boardley’, <i>Journal of the Early Book Society</i>, Volume 22, 2019</a>
-        <br><br>
 
-    </div>
-    
-    
-<div id="canvasdiv">
-    </div>
+<h1>James Misson</h1>
+<p class="subtitle">Research software engineer &amp; book historian</p>
 
+<p>I'm a Research Software Engineer at the British Library, where I'm developing IIIF infrastructure as part of the library's recovery from the 2023 cyber-attack. I'm also a lead developer of the <i>Universal Viewer</i>, an open-source IIIF viewer used by cultural heritage institutions around the world.<p>
+<p>My research is in computational bibliography: the use of code and data to understand the history of printing and publishing. I'm especially interested in typography, and my forthcoming book is a data-driven study of blackletter, roman, and italic type in sixteenth-century England. Before joining the British Library, I was a Language Engineer at Oxford Languages, working on the <i>Oxford English Dictionary</i>, and before that I built research databases and taught at the universities of Geneva and Oxford. I teach a course on early modern typography at the London Rare Book School every summer. </p>
+<h2>Projects</h2>
 
+<p class="entry"><a href="https://universalviewer.io/">Universal Viewer</a>. An open-source viewer for IIIF images, audio, and video, used by cultural heritage institutions worldwide.</p>
+<p class="entry"><a href="https://jamesmisson.github.io/iiif-timeline/">IIIF Timeline</a>. An interactive timeline for exploring IIIF collections.</p>
+<p class="entry"><a href="https://jamesmisson.github.io/eebography/">Eebography</a>. A font that recreates the visual distortions of <i>Early English Books Online</i>.</p>
+<p class="entry"><a href="https://earlymodernprefaces.unige.ch/index.html">To the Reader</a>. A database of 19,140 early modern printed prefaces and other paratexts, built for the University of Geneva.</p>
+<p class="entry"><a href="https://github.com/jamesmisson/typography1509-1592">Typography 1509–1592</a>. A dataset describing the typography of every book on <i>Early English Books Online</i> printed between 1509 and 1592.</p>
+<p class="entry"><a href="https://jamesmisson.github.io/Octopus/">Octopus</a>. An app for constructing complex search queries and running them across eight databases at once, built for researchers at the <i>OED</i>.</p>
+<p class="entry"><a href="https://github.com/jamesmisson/q-generator">Q-Gen</a>. A Chrome extension that generates XML citations in the <i>OED</i>’s house style.</p>
+
+<h2>Publications</h2>
+
+<p class="entry"><i>Reading Early English Typography</i>, Oxford English Monographs (Oxford University Press, forthcoming).</p>
+<p class="entry">With Eetu Mäkelä, Devani Singh, and Mikko Tolonen, <a href="https://academic.oup.com/dsh/article/41/1/236/8316931">‘Opening the Black Box of EEBO’,</a> <i>Digital Scholarship in the Humanities</i>, 40 (2025).</p>
+<p class="entry">‘Eebography: A Specimen’, <i>Inscription: The Journal of Material Text</i>, 5 (2025).</p>
+<p class="entry"><a href="https://doi.org/10.1093/oxfordhb/9780198846239.013.17">‘Typography’</a>, in <i>The Oxford Handbook of the History of the Book in Early Modern England</i>, ed. by Adam Smyth (Oxford University Press, 2023).</p>
+<p class="entry"><a href="https://doi.org/10.1093/oso/9780198863045.003.0005">‘Kludging Type: Some Workarounds in Early English Print’</a>, in <i>Printing &amp; Misprinting</i>, ed. by Anthony Grafton, Paolo Sachet, and Geri Della Rocca de Candal (Oxford University Press, 2023).</p>
+<p class="entry">With Devani Singh, <a href="https://doi.org/10.1353/bh.2022.0018">‘Computing Book Parts with EEBO-TCP’</a>, <i>Book History</i>, 27 (2022).</p>
+<p class="entry"><a href="https://doi.org/10.1007/978-3-030-88055-2_9">‘For Lack of Letters: Early Typographical Shibboleths of English and Other Foreign Languages’</a>, in <i>Print, Agency, and Regional Identity</i>, ed. by Rachel Stenner (Palgrave Macmillan, 2022).</p>
+<p class="entry"><a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119086130">‘Copland, Robert (Tudor poet)’</a> and <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119086130">‘The Pilgrim’s Tale’</a>, in <i>The Chaucer Encyclopedia</i>, ed. by Richard Newhauser, Vincent Gillespie, Jessica Rosenfeld, and Katie Walter (Wiley Blackwell, 2023).</p>
+<p class="entry"><a href="https://inscriptionjournal.com/2021/10/19/signifying-nothing/">‘Signifying Nothing: Following a Hole through Three Text Technologies’</a>, <i>Inscription: The Journal of Material Text</i>, 2 (2021).</p>
+<p class="entry">With Louise Mycock, <a href="https://doi.org/10.1017/S1360674320000209">‘Lone Pronoun Tags in Early Modern English: The Dramas of Marlowe, Shakespeare, and Jonson’</a>, <i>English Language and Linguistics</i> (2020).</p>
+<p class="entry">Review of John Boardley, <i>Typographic Firsts: Adventures in Early Printing</i>, <a href="https://link.gale.com/apps/doc/A636714940/EAIM?u=anon~afcec16&amp;sid=sitemap&amp;xid=97f93367"><i>Journal of the Early Book Society</i>, 22 (2019)</a>.</p>
+
+<footer><a href="https://github.com/jamesmisson">GitHub</a></footer>
 
 </body>
+</html>
